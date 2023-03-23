@@ -33,7 +33,7 @@ def generate_list(listA):
         iA += 1
     return headA.next
 
-def assetion(solution, listA, n, a):
+def assertion(solution, listA, n, a):
     headA = generate_list(listA)
     answer = []
     sol = solution.removeNthFromEnd(headA, n)
@@ -46,7 +46,7 @@ def assetion(solution, listA, n, a):
 def test(solution, listA, n):
     answer = listA.copy()
     answer.pop(len(answer)-n)
-    assetion(solution, listA, n, answer)
+    assertion(solution, listA, n, answer)
 
 if __name__ == '__main__':
     solution = Solution()

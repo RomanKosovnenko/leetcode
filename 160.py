@@ -104,7 +104,7 @@ def generate_list(listA, listB, skipA, skipB):
         iA += 1
     return headA.next, headB.next
 
-def assetion(solution, listA, listB, skipA, skipB):
+def assertion(solution, listA, listB, skipA, skipB):
     headA, headB = generate_list(listA, listB, skipA, skipB)
     naive = solution.getIntersectionNodeIterative(headA, headB)
     sol = solution.getIntersectionNodeSet(headA, headB)
@@ -118,7 +118,7 @@ if __name__ == '__main__':
     skipA = 2
     skipB = 3
 
-    assetion(solution, listA, listB, skipA, skipB)
+    assertion(solution, listA, listB, skipA, skipB)
 
     intersectVal = 2
     listA = [1,9,1,2,4]
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     skipA = 3
     skipB = 1
 
-    assetion(solution, listA, listB, skipA, skipB)
+    assertion(solution, listA, listB, skipA, skipB)
 
     intersectVal = 0
     listA = [2,6,4]
@@ -134,7 +134,7 @@ if __name__ == '__main__':
     skipA = 3
     skipB = 2
 
-    assetion(solution, listA, listB, skipA, skipB)
+    assertion(solution, listA, listB, skipA, skipB)
 
     intersectVal = 1
     listA = [1]
@@ -142,7 +142,7 @@ if __name__ == '__main__':
     skipA = 0
     skipB = 0
 
-    assetion(solution, listA, listB, skipA, skipB)
+    assertion(solution, listA, listB, skipA, skipB)
 
     intersectVal = 3
     listA = [3]
@@ -150,7 +150,7 @@ if __name__ == '__main__':
     skipA = 0
     skipB = 1
 
-    assetion(solution, listA, listB, skipA, skipB)
+    assertion(solution, listA, listB, skipA, skipB)
     
     intersectVal = 0
     listA = []
@@ -158,7 +158,7 @@ if __name__ == '__main__':
     skipA = 0
     skipB = 0
 
-    assetion(solution, listA, listB, skipA, skipB)
+    assertion(solution, listA, listB, skipA, skipB)
 
 
     intersectVal = 20000
@@ -167,4 +167,4 @@ if __name__ == '__main__':
     skipA = 10000
     skipB = 9888
 
-    assetion(solution, listA, listB, skipA, skipB)
+    assertion(solution, listA, listB, skipA, skipB)

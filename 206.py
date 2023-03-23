@@ -27,7 +27,7 @@ def generate_list(listA):
         iA += 1
     return headA.next
 
-def assetion(solution, listA):
+def assertion(solution, listA):
     headA = generate_list(listA)
     answer = []
     sol = solution.reverseList(headA)
@@ -38,7 +38,7 @@ def assetion(solution, listA):
     assert answer == listA[::-1]
 
 def test(solution, listA):
-    assetion(solution, listA)
+    assertion(solution, listA)
 
 if __name__ == '__main__':
     solution = Solution()
