@@ -1,19 +1,31 @@
 
 from typing import List
 
-
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         n = len(nums)
         if n == 1:
             return True
-        steps = nums[0]
-        for i in range(1, n):
-            if steps >= 1:
-                steps = max(steps-1, nums[i])
-            else:
+        pos = 0
+        for i in range(len(nums)):
+            if i > pos:
                 return False
-        return True
+            if pos < i + nums[i]:
+                pos = i + nums[i]
+        return pos >= len(nums)-1
+
+# class Solution:
+#     def canJump(self, nums: List[int]) -> bool:
+#         n = len(nums)
+#         if n == 1:
+#             return True
+#         steps = nums[0]
+#         for i in range(1, n):
+#             if steps >= 1:
+#                 steps = max(steps-1, nums[i])
+#             else:
+#                 return False
+#         return True
 
 
 # class Solution:
